@@ -1,12 +1,19 @@
 def solution(binomial):
+    count = 0
     question = binomial.split(" ")
-    a = int(question[0])
-    b = question[1]
-    c = int(question[2])
     
-    if(b == '+'):
-        return a + c
-    elif(b == '-'):
-        return a - c
-    elif(b == '*'):
-        return a * c
+    for i in question:
+        if(count==0):
+            a = int(question[count])
+        elif(count==1):
+            op = question[count]
+        elif(count==2):
+            b = int(question[count])
+        count+=1
+        
+    if(op == '+'):
+        return a + b
+    elif(op == '-'):
+        return a - b
+    elif(op == '*'):
+        return a * b
