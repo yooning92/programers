@@ -1,0 +1,6 @@
+SELECT SUBSTR(price, 1, 1) * 10000 as "PRICE_GROUP", COUNT(product_id) as "PRODUCTS"
+FROM product
+WHERE 1=1
+GROUP BY SUBSTR(price, 1, 1) * 10000
+ORDER BY SUBSTR(price, 1, 1) * 10000
+;
