@@ -1,0 +1,1 @@
+const solution = (myString)  => [...myString].map(character => character < 'l' ? 'l' : character).join("");
