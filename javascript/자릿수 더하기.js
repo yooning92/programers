@@ -1,0 +1,1 @@
+const solution = (n) => n.toString().split("").reduce((pre, cur) => pre + Number(cur), 0);
